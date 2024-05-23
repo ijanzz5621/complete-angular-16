@@ -1,0 +1,6 @@
+Notes:
+======
+
+1. To use ngIf in ng-container, must import CommonModule from @angular/common
+
+2. 

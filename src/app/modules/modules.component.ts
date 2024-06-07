@@ -19,14 +19,16 @@ import { ComponentLifeCycleComponent } from './component-lifecycle/component-lif
 })
 export class ModulesComponent {
 
-  inputVal: string = '';
+  inputVal: string[] = ['Hello', 'Hi there!'];
+  inputVal2: string = '';
 
   constructor() {
     console.log("Initialize main module!");
   }
 
   onBtnClicked(inputEl: HTMLInputElement) {
-    this.inputVal = inputEl.value;
+    this.inputVal.push(inputEl.value);
+    this.inputVal2 = inputEl.value;
   }
 
 }

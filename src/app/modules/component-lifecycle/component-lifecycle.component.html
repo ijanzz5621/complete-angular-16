@@ -4,6 +4,10 @@
 <img src="./../../../assets/images/angular-lifecycle-hook.png" alt="">
 
 <div class="demo">
-    <p>Message: {{ message }}</p>
+    <p #temp *ngFor="let msg of message">Message: {{ msg }}</p>
+</div>
+
+<div class="demo">
+    <p #temp2>Message: {{ message2 }}</p>
 </div>
 

@@ -1,9 +1,12 @@
-import { Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-component-lifecycle',
   standalone: true,
-  imports: [],
+  imports: [
+    NgFor
+  ],
   templateUrl: './component-lifecycle.component.html',
   styleUrl: './component-lifecycle.component.css'
 })
@@ -11,7 +14,13 @@ export class ComponentLifeCycleComponent implements OnChanges, OnInit, DoCheck {
 
   title: string = 'Demo Component';
   @Input()
-  message: string | undefined;
+  message: string[] | undefined;
+
+  @Input()
+  message2: string | undefined;
+
+  @ViewChild('temp')
+  tempPara: ElementRef | undefined;
 
   constructor() {
     console.log('Initialized Component Init!');
@@ -27,6 +36,7 @@ export class ComponentLifeCycleComponent implements OnChanges, OnInit, DoCheck {
 
   ngOnInit() {
     console.log('OnInit hook triggered!');
+    //console.log('tempPara value: ' + this.tempPara?.nativeElement.innerHTML)
   }
 
   ngDoCheck() {

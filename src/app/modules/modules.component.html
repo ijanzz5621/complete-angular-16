@@ -3,9 +3,9 @@
 <!-- <app-content-child></app-content-child> -->
 
 <div class="container">
-    <input type="text" #inputEl>
+    <input type="text" #inputEl (focus)="0">
     <button (click)="onBtnClicked(inputEl)">Submit</button>
-    <app-component-lifecycle [message]="inputVal"></app-component-lifecycle>
+    <app-component-lifecycle [message]="inputVal" [message2]="inputVal2"></app-component-lifecycle>
 </div>
 
 

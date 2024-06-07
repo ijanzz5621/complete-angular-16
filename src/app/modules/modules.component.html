@@ -5,7 +5,11 @@
 <div class="container">
     <input type="text" #inputEl (focus)="0">
     <button (click)="onBtnClicked(inputEl)">Submit</button>
-    <app-component-lifecycle [message]="inputVal" [message2]="inputVal2"></app-component-lifecycle>
+    <app-component-lifecycle [message]="inputVal" [message2]="inputVal2" *ngIf="!toDestroy">
+        <p #temp>User has entered following text: {{inputVal}}</p>
+    </app-component-lifecycle>
+    <br><br>
+    <button (click)="DestroyComponent()">Show / Hide</button>
 </div>
 
 

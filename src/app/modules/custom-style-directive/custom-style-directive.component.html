@@ -1,0 +1,13 @@
+<h2>Custom Class & Style Directive</h2>
+
+<!-- <div class="app-container" [ngStyle]="{backgroundColor: active ? 'green' : 'red', color: active ? 'white' : 'black'}">
+    <p>
+        This is a test content for Custom Style Directive Learning
+    </p>
+</div> -->
+
+<div class="app-container" appStyle [style]="{'backgroundColor': active ? 'red' : 'blue', 'color': active ? 'white' : 'yellow'}">
+    <p>
+        This is a test content for Custom Style Directive Learning
+    </p>
+</div>

@@ -6,6 +6,9 @@ import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { NgContainerComponent } from './ng-container/ng-container.component';
 import { ContentChildComponent } from './content-child/content-child.component';
 import { ComponentLifeCycleComponent } from './component-lifecycle/component-lifecycle.component';
+import { CustomClassDirectiveComponent } from './custom-class-directive/custom-class-directive.component';
+import { CustomStyleDirectiveComponent } from './custom-style-directive/custom-style-directive.component';
+
 
 @Component({
   selector: 'app-modules',
@@ -15,7 +18,9 @@ import { ComponentLifeCycleComponent } from './component-lifecycle/component-lif
     NgTemplateComponent,
     NgContainerComponent,
     ContentChildComponent,
-    ComponentLifeCycleComponent
+    ComponentLifeCycleComponent,
+    CustomClassDirectiveComponent,
+    CustomStyleDirectiveComponent
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.css'

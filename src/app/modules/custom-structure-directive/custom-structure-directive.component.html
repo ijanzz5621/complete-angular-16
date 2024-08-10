@@ -1,0 +1,30 @@
+<h3>Custom Structural Directive Example</h3>
+
+<div class="notice-container">
+    <div class="notice-header">
+        <button (click)="displayTermsOfServices()">+</button>
+    </div>
+    <div class="notice-info">
+        <p>Read terms of services and privacy policy.</p>
+    </div>
+    <ng-template [ngIf]="display">
+        <div class="notice-body" *appIf="display">
+            <h1>Terms of services & privacy policy</h1>
+            <p>
+                Sample of content for terms and conditions privacy and policy
+            </p>
+            <h2>Terms of services</h2>
+            <p>
+                Sample content for terms of services
+            </p>
+            <h2>Privacy policy</h2>
+            <p>
+                Sample content for Privacy policy
+            </p>
+        </div>
+    </ng-template>
+
+    <p *appIf="notDisplay">This is a demo paragraph</p>
+
+
+</div>

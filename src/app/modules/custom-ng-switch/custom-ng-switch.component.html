@@ -1,0 +1,32 @@
+<h3>Custom Ng Switch Example</h3>
+
+<div style="background-color: #28282b; width: 100%; display: inline-flex; color: #fff; padding:5px;">
+    <div style="margin-right: 15px; cursor: pointer;" (click)="showContent('')">Home</div>
+    <div style="margin-right: 15px; cursor: pointer;" (click)="showContent('about-us')">About Us</div>
+    <div style="margin-right: 15px; cursor: pointer;" (click)="showContent('contact')">Contact</div>
+    <div style="margin-right: 15px; cursor: pointer;" (click)="showContent('profile')">Profile</div>
+</div>
+
+<div class="main-body" [ngSwitch]="tab">
+
+    <div *ngSwitchDefault>
+        <h4>Home</h4>
+        <p>Home Content</p>
+    </div>
+
+    <div *ngSwitchCase="'about-us'">
+        <h4>About Us</h4>
+        <p>About Us Content</p>
+    </div>
+
+    <div *ngSwitchCase="'contact'">
+        <h4>Contact</h4>
+        <p>Contact Content</p>
+    </div>
+
+    <div *ngSwitchCase="'profile'">
+        <h4>Profile</h4>
+        <p>Profile Content</p>
+    </div>
+
+</div>

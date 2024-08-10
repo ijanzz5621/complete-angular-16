@@ -8,6 +8,8 @@ import { ContentChildComponent } from './content-child/content-child.component';
 import { ComponentLifeCycleComponent } from './component-lifecycle/component-lifecycle.component';
 import { CustomClassDirectiveComponent } from './custom-class-directive/custom-class-directive.component';
 import { CustomStyleDirectiveComponent } from './custom-style-directive/custom-style-directive.component';
+import { CustomStructureDirectiveComponent } from './custom-structure-directive/custom-structure-directive.component';
+import { CustomNgSwitchComponent } from './custom-ng-switch/custom-ng-switch.component';
 
 
 @Component({
@@ -20,7 +22,9 @@ import { CustomStyleDirectiveComponent } from './custom-style-directive/custom-s
     ContentChildComponent,
     ComponentLifeCycleComponent,
     CustomClassDirectiveComponent,
-    CustomStyleDirectiveComponent
+    CustomStyleDirectiveComponent,
+    CustomStructureDirectiveComponent,
+    CustomNgSwitchComponent
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.css'

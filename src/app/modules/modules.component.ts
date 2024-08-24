@@ -10,6 +10,7 @@ import { CustomClassDirectiveComponent } from './custom-class-directive/custom-c
 import { CustomStyleDirectiveComponent } from './custom-style-directive/custom-style-directive.component';
 import { CustomStructureDirectiveComponent } from './custom-structure-directive/custom-structure-directive.component';
 import { CustomNgSwitchComponent } from './custom-ng-switch/custom-ng-switch.component';
+import { ServiceExampleComponent } from './service-example/service-example.component';
 
 
 @Component({
@@ -24,7 +25,8 @@ import { CustomNgSwitchComponent } from './custom-ng-switch/custom-ng-switch.com
     CustomClassDirectiveComponent,
     CustomStyleDirectiveComponent,
     CustomStructureDirectiveComponent,
-    CustomNgSwitchComponent
+    CustomNgSwitchComponent,
+    ServiceExampleComponent
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.css'

@@ -1,0 +1,41 @@
+.admin-user-name{
+    width: 40%;
+}
+.admin-user-gender{
+    width: 20%;
+}
+.admin-user-subtype{
+    width: 20%;
+    border-left: #1D8348 3px solid;
+}
+.admin-user-active{
+    width: 20%;
+    border-left: #1D8348 3px solid;
+}
+
+.admin-user-show-detail-button{
+    padding: 2px 5px;
+    border: none;
+    background-color: #28282B;
+    color: yellow;
+    font-weight: bold;
+}
+
+.admin-user-list{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.admin-user-detail{
+    display: flex;
+    width: 70%;
+    margin: 5px auto;
+    padding: 15px 30px;
+    background-color: #28282B;
+    color: white;
+    border-bottom: #1D8348 3px solid;
+    font-size: 18px;
+    font-weight: lighter;
+}

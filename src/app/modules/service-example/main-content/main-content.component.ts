@@ -6,16 +6,23 @@ import { SubscribeService } from '../Services/subscribe.service';
   selector: 'app-main-content-service',
   standalone: true,
   imports: [
-    SideContentComponent
+    SideContentComponent,
   ],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.css'
+  styleUrl: './main-content.component.css',
+  providers: [
+    SubscribeService
+  ]
 })
 export class MainContentComponent {
 
+  constructor(private subscribeService: SubscribeService) {
+
+  }
+
   onSubscribeClicked() {
-    let subscribeService = new SubscribeService()
-    subscribeService.onSubscribe('daily')
+    // let subscribeService = new SubscribeService()
+    this.subscribeService.onSubscribe('daily')
   }
 
 }

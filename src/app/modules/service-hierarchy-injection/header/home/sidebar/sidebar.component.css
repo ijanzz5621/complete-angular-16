@@ -1,0 +1,24 @@
+.sidebar-container{
+    border: #F0F3F4 3px solid;
+    padding: 10px 10px;
+    width: 340px;
+    height: 280px;
+    margin-left: 120px;
+}
+.sidebar-hero{
+    height: 180px;
+    background-image: url("../../../../../../assets/images/background.jpg");
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.sidebar-button{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 12px 0px;
+    background-color: white;
+    color: #28282B;
+    font-size: 20px;
+    font-weight: bold;
+    border: #28282B 3px solid;
+}

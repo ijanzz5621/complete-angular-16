@@ -6,7 +6,10 @@ import { SubscribeService } from '../Services/subscribe.service';
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  providers: [
+    SubscribeService
+  ]
 })
 export class HeaderComponent {
 

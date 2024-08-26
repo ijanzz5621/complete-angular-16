@@ -1,4 +1,11 @@
 import { Component } from '@angular/core';
+import { SubscribeService } from '../Services/subscribe.service';
+
+// Note **: 
+// 1. If the service not define in child, it will use the same instance of service that has been injected
+// in parent component
+
+// 2. If service provider define in child component, it will OVERRIDE the parent service provider
 
 @Component({
   selector: 'app-side-content-service',
@@ -9,15 +16,12 @@ import { Component } from '@angular/core';
 })
 export class SideContentComponent {
 
+  constructor(private subscribeService: SubscribeService) {
+  }
+
   onSubscribeClicked() {
-    // Add user to the database
-
-    // Send email with subscription details
-
-    // Allow user to access the services
-
-    alert('Thank you for subscribing. You can access the services now.');
-    console.log("Thank you!!!");
+    // let subscribeService = new SubscribeService()
+    this.subscribeService.onSubscribe('quarterly')
   }
 
 }

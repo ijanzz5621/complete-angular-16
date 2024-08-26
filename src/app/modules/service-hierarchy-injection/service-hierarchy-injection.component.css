@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Roboto:wght@100;300;400&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.main-container{
+    width: 1120px;
+    margin: 50px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0px 10px;
+    color: #28282B;
+    font-weight: bold;
+}
+button{
+    padding: 12px 30px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    margin: 10px 0px;
+}
+p{
+    margin: 5px 0px;
+}

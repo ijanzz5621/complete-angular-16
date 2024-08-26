@@ -1,0 +1,40 @@
+.admin-button{
+    margin: 8px 2px;
+    width: 563px;
+    background-color: #2ECC71;
+}
+
+.admin-container{
+    background-color: white;
+}
+
+.admin-add-user{
+    height: 25%;
+    background-color: #28282B;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+input[type=text]{
+    width: 280px;
+    height: 20px;
+    padding: 10px 20px;
+    margin: 2px 1px;
+    border: none;
+}
+
+select{
+    width: 280px;
+    height: 40px;
+    padding: 10px 30px;
+    border: none;
+    margin: 2px 1px;
+}
+
+h2{
+    margin: 10px 0px;
+}
+p{
+    margin: 5px 0px;
+}

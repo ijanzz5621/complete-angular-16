@@ -4,7 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-service-hierarchy-header',
   standalone: true,
   imports: [
     NgSwitch,
@@ -27,6 +27,10 @@ export class HeaderComponent {
   //When Admin Link is clicked
   AdminClicked(){
     this.selectedTab = 'admin';
+  }
+
+  OnSubscribeClicked() {
+    alert('Subscribed!')
   }
 
 }

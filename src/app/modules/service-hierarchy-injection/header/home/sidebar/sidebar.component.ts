@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  OnSubscribeClicked() {
+    alert('Sidebar Subscription clicked!!!')
+  }
+
 }

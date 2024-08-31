@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  OnSubscribeClicked() {
+    alert('Hero Subscribe now clicked!!!')
+  }
+
 }

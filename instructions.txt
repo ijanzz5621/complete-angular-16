@@ -4,7 +4,7 @@ Notes:
 1. To use ngIf in ng-container, must import CommonModule from @angular/common
 
 2. Tutorial stop at: 
-    - Injecting Service into Another Service
-    - https://www.youtube.com/watch?v=xLgKi83P1G4&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=65
-    - time: 0:18
+    - #67 Component Interaction using Services | Services & Dependency Injection
+    - https://www.youtube.com/watch?v=SCmCrE6GPoE&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=67
+    - time: 0:00
 

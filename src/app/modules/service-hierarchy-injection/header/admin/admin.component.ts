@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserService } from '../../Services/user.service';
+import { USER_TOKEN } from '../../../../app.component';
 
 @Component({
   selector: 'app-admin',
@@ -23,7 +24,7 @@ export class AdminComponent {
   subType: string = 'Yearly';
   status: string = 'Active';
 
-  constructor(private userService: UserService) {
+  constructor(@Inject(USER_TOKEN) private userService: UserService) {
   }
 
   AddNewUser() {

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { UserService } from '../../../Services/user.service';
 import { User } from '../../../Models/User';
 import { NgFor } from '@angular/common';
+import { USER_TOKEN } from '../../../../../app.component';
 
 @Component({
   selector: 'app-user-list',
@@ -16,7 +17,7 @@ export class UserListComponent implements OnInit {
 
   users: User[] = [];
 
-  constructor(private userService: UserService) {
+  constructor(@Inject(USER_TOKEN) private userService: UserService) {
   }
 
   ngOnInit() {

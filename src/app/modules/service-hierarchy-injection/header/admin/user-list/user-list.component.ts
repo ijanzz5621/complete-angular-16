@@ -27,4 +27,10 @@ export class UserListComponent implements OnInit {
   RemoveUser(name: string) {
     this.userService.RemoveUser(name);
   }
+
+  ShowUserDetails(user: User) {
+    console.log('Selected User: ', user)
+    this.userService.OnShowUserDetails(user);
+  }
+
 }

@@ -1,6 +1,7 @@
 .admin-button{
     margin: 8px 2px;
-    width: 563px;
+    width: 650px;
+    height: 45px;
     background-color: #2ECC71;
 }
 
@@ -25,7 +26,7 @@ input[type=text]{
 }
 
 select{
-    width: 280px;
+    width: 320px;
     height: 40px;
     padding: 10px 30px;
     border: none;

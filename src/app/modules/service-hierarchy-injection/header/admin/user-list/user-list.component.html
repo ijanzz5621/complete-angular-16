@@ -4,6 +4,7 @@
         <div class="admin-user-gender">{{user.gender}}</div>
         <div class="admin-user-subtype">{{user.subType}}</div>
         <div class="admin-user-active">{{user.status}}</div>
-        <button class="admin-user-show-detail-button" (click)="RemoveUser(user.name)">-</button>
+        <button class="admin-user-show-detail-button" (click)="RemoveUser(user.name)">REMOVE</button>
+        <button style="margin-left: 20px; cursor:pointer;" (click)="ShowUserDetails(user)">info</button>
     </div>   
 </div>

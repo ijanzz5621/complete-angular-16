@@ -19,6 +19,7 @@
     background-color: #28282B;
     color: yellow;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .admin-user-list{

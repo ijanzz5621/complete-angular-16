@@ -12,6 +12,7 @@ import { CustomStructureDirectiveComponent } from './custom-structure-directive/
 import { CustomNgSwitchComponent } from './custom-ng-switch/custom-ng-switch.component';
 import { ServiceExampleComponent } from './service-example/service-example.component';
 import { ServiceHierarchyInjectionComponent } from './service-hierarchy-injection/service-hierarchy-injection.component';
+import { ObservableExample01Component } from './observable/observable-example01/observable-example01.component';
 
 
 @Component({
@@ -29,6 +30,7 @@ import { ServiceHierarchyInjectionComponent } from './service-hierarchy-injectio
     CustomNgSwitchComponent,
     ServiceExampleComponent,
     ServiceHierarchyInjectionComponent,
+    ObservableExample01Component
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.css'

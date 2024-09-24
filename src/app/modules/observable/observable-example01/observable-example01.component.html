@@ -1,11 +1,24 @@
 <p class="title">{{title}}</p>
 
-<div class="container">
+<div class="container" style="width: 100%;">
     <h2>Observables in Angular</h2>
+
     <div class="data-list" *ngFor="let x of data">
         {{ x }}
     </div>
 
     <button (click)="GetAsyncDataClicked()">Get Data</button>
+
+    <div class="data-list" *ngFor="let y of ofdata">
+        {{ y }}
+    </div>
+
+    <button (click)="GetAsyncDataClickUsingOf()">Get Data Of</button>
+
+    <div class="data-list" *ngFor="let z of fromdata">
+        {{ z }}
+    </div>
+
+    <button (click)="GetAsyncDataClickUsingFrom()">Get Data From</button>
 
 </div>

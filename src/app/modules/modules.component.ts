@@ -13,6 +13,7 @@ import { CustomNgSwitchComponent } from './custom-ng-switch/custom-ng-switch.com
 import { ServiceExampleComponent } from './service-example/service-example.component';
 import { ServiceHierarchyInjectionComponent } from './service-hierarchy-injection/service-hierarchy-injection.component';
 import { ObservableExample01Component } from './observable/observable-example01/observable-example01.component';
+import { ObservableFromEventComponent } from './observable/observable-from-event/observable-from-event.component';
 
 
 @Component({
@@ -30,7 +31,8 @@ import { ObservableExample01Component } from './observable/observable-example01/
     CustomNgSwitchComponent,
     ServiceExampleComponent,
     ServiceHierarchyInjectionComponent,
-    ObservableExample01Component
+    ObservableExample01Component,
+    ObservableFromEventComponent,
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.css'

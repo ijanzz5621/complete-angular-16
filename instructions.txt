@@ -4,7 +4,7 @@ Notes:
 1. To use ngIf in ng-container, must import CommonModule from @angular/common
 
 2. Tutorial stop at: 
-    - #73 RxJS map & filter Operator | Understanding Observables & RxJS | A Complete Angular Course
-    - https://www.youtube.com/watch?v=TYdEf1tYUOc&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=73
+    - #74 Subjects in RxJS | Understanding Observables & RxJS | A Complete Angular Course
+    - https://www.youtube.com/watch?v=Rh1YHbFg-Tw&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=74
     - time: 0:00
 

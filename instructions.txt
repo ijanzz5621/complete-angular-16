@@ -4,7 +4,7 @@ Notes:
 1. To use ngIf in ng-container, must import CommonModule from @angular/common
 
 2. Tutorial stop at: 
-    - #74 Subjects in RxJS | Understanding Observables & RxJS | A Complete Angular Course
-    - https://www.youtube.com/watch?v=Rh1YHbFg-Tw&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=74
+    - #75 Observable vs Subjects | Understanding Observables & RxJS | A Complete Angular Course
+    - https://www.youtube.com/watch?v=uAVgP4b64ew&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=75
     - time: 0:00
 

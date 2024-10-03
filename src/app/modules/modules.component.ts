@@ -15,6 +15,7 @@ import { ServiceHierarchyInjectionComponent } from './service-hierarchy-injectio
 import { ObservableExample01Component } from './observable/observable-example01/observable-example01.component';
 import { ObservableFromEventComponent } from './observable/observable-from-event/observable-from-event.component';
 import { ObservableMapFilterComponent } from './observable/observable-map-filter/observable-map-filter.component';
+import { ObservableSubjectComponent } from './observable/observable-subject/observable-subject.component';
 
 
 @Component({
@@ -35,6 +36,7 @@ import { ObservableMapFilterComponent } from './observable/observable-map-filter
     ObservableExample01Component,
     ObservableFromEventComponent,
     ObservableMapFilterComponent,
+    ObservableSubjectComponent,
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.css'

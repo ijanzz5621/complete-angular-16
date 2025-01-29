@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complete-angular-16
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: complete-angular-16
+  template:
+    metadata:
+      labels:
+        app: complete-angular-16
+    spec:
+      containers:
+      - name: complete-angular-16
+        image: ijanzz5621/complete-angular-16:latest
+        ports:
+        - containerPort: 4000
+        env:
+        - name: NODE_ENV
+          value: production

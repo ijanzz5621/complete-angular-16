@@ -81,6 +81,13 @@ podman run -p 4500:4000 complete-angular-16
 Note: 4500 external port (can be any port)
       4000 - internal port - fix
 
+Minikube:
+---------
+
+minikube start
+
+minikube dashboard
+
 4. Create Kubernetes Deployment and Service YAML Files
 ------------------------------------------------------
 
@@ -124,12 +131,19 @@ spec:
 --------------------------------
 
 kubectl apply -f deployment.yaml
+or
+minikube kubectl -- apply -f deployment.yaml -n development
+
 kubectl apply -f service.yaml
+or
+minikube kubectl -- apply -f service.yaml -n development
 
 6. Access Your Application
 --------------------------
 
 kubectl get services (Look for the EXTERNAL-IP of the complete-angular-16-service.)
+or
+minikube kubectl -- -n development get services
 
 7. (Optional) Set Up Ingress (If you want to use a custom domain or manage traffic routing, you can set up an Ingress resource)
 ------------------------------------------------------------------------------------------------------------------------------
@@ -154,6 +168,19 @@ spec:
               number: 80
 
 kubectl apply -f ingress.yaml
+
+Run from Kubernetes:
+--------------------
+
+Check the kubernetes port
+
+Get minikube IP
+
+ minikube ip
+
+go to browser and put http://<minikube-ip>:<kubernetes port>
+eg: http://172.18.173.216:30080/
+
 
 8. Monitor and Scale
 ---------------------

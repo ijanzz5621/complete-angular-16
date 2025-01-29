@@ -4,7 +4,174 @@ Notes:
 1. To use ngIf in ng-container, must import CommonModule from @angular/common
 
 2. Tutorial stop at: 
-    - #75 Observable vs Subjects | Understanding Observables & RxJS | A Complete Angular Course
-    - https://www.youtube.com/watch?v=uAVgP4b64ew&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=75
+    - #80 Unsubscribe from an Observable | Understanding Observables & RxJS | A Complete Angular Course
+    - https://www.youtube.com/watch?v=WFf9_V4TlJI&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=80
     - time: 0:00
+
+
+3. Add new component
+
+    ng generate component modules/<module-name>
+
+4. run
+
+    ng serve
+
+
+DEPLOYMENT:
+===========
+
+1. Dockerfile:
+--------------
+
+# Stage 1: Build the Angular app
+FROM node:18 as build-stage
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+
+RUN chmod -R 777 /app
+RUN useradd -m appuser
+USER appuser
+
+RUN npm run build
+
+# Stage 2: Serve the app using Node.js
+FROM node:18
+WORKDIR /app
+
+# Copy the built app from the build stage
+COPY --from=build-stage /app/dist/your-angular-app/browser /app/browser
+COPY --from=build-stage /app/dist/your-angular-app/server /app/server
+
+# Copy package.json and install production dependencies
+COPY package.json ./
+RUN npm install --production
+
+# Expose the port your app runs on
+EXPOSE 4000
+
+# Start the server
+CMD ["node", "/app/server/main.js"]
+
+2. Build the docker image
+--------------------------
+
+docker build -t complete-angular-16:latest .
+or
+podman build -t complete-angular-16:latest .
+
+3. Push the Docker Image to a Container Registry (Optional)
+-----------------------------------------------------------
+
+docker tag complete-angular-16:latest your-dockerhub-username/complete-angular-16:latest
+or
+podman tag complete-angular-16 docker.io/ijanzz5621/complete-angular-16:latest
+
+docker push your-dockerhub-username/complete-angular-16:latest
+or 
+podman push docker.io/ijanzz5621/complete-angular-16:latest
+
+3.1 Test RUN
+------------
+
+podman run -p 4500:4000 complete-angular-16
+
+Note: 4500 external port (can be any port)
+      4000 - internal port - fix
+
+4. Create Kubernetes Deployment and Service YAML Files
+------------------------------------------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complete-angular-16
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: complete-angular-16
+  template:
+    metadata:
+      labels:
+        app: complete-angular-16
+    spec:
+      containers:
+      - name: complete-angular-16
+        image: your-dockerhub-username/complete-angular-16:latest
+        ports:
+        - containerPort: 4000
+        env:
+        - name: NODE_ENV
+          value: production
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: complete-angular-16-service
+spec:
+  selector:
+    app: complete-angular-16
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4000
+  type: LoadBalancer
+
+5. Deploy to Kubernetes Cluster
+--------------------------------
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+6. Access Your Application
+--------------------------
+
+kubectl get services (Look for the EXTERNAL-IP of the complete-angular-16-service.)
+
+7. (Optional) Set Up Ingress (If you want to use a custom domain or manage traffic routing, you can set up an Ingress resource)
+------------------------------------------------------------------------------------------------------------------------------
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: complete-angular-16-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: your-domain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: complete-angular-16-service
+            port:
+              number: 80
+
+kubectl apply -f ingress.yaml
+
+8. Monitor and Scale
+---------------------
+
+kubectl scale deployment complete-angular-16 --replicas=5
+
+
+Publish using PODMAN:
+---------------------
+
+podman login docker.io
+
+podman tag my-custom-image docker.io/johndoe/my-repo:latest
+
+podman push docker.io/johndoe/my-repo:latest
+
+
+
+
+
 

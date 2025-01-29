@@ -16,6 +16,9 @@ import { ObservableExample01Component } from './observable/observable-example01/
 import { ObservableFromEventComponent } from './observable/observable-from-event/observable-from-event.component';
 import { ObservableMapFilterComponent } from './observable/observable-map-filter/observable-map-filter.component';
 import { ObservableSubjectComponent } from './observable/observable-subject/observable-subject.component';
+import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
+import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 
 
 @Component({
@@ -37,6 +40,9 @@ import { ObservableSubjectComponent } from './observable/observable-subject/obse
     ObservableFromEventComponent,
     ObservableMapFilterComponent,
     ObservableSubjectComponent,
+    BehaviorSubjectComponent,
+    ReplaySubjectComponent,
+    AsyncSubjectComponent
   ],
   templateUrl: './modules.component.html',
   styleUrl: './modules.component.css'
